@@ -22,7 +22,7 @@
 /datum/vote/transfer/setup_vote(mob/creator, automatic)
 	choices = list("Iniciar transferencia de la tripulacion.", "Extender la ronda ([config.vote_autotransfer_interval / 600] minutos).")
 	if (config.allow_extra_antags && SSvote.is_addantag_allowed(creator, automatic))
-		choices += "Agregar antagonista."
+		choices += ""
 	..()
 
 /datum/vote/transfer/handle_default_votes()
@@ -48,7 +48,7 @@
 		return 1
 	if(result[1] == "Iniciar transferencia de la tripulacion.")
 		init_autotransfer()
-	else if(result[1] == "Agregar antagonista")
+	else if(result[1] == "Agregar antagonista.")
 		SSvote.queued_auto_vote = /datum/vote/add_antagonist
 
 /datum/vote/transfer/mob_not_participating(mob/user)

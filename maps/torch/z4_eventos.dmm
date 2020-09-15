@@ -2950,6 +2950,10 @@
 	dir = 5
 	},
 /obj/structure/flora/pottedplant/decorative,
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_y = 32
+	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/casinojack/sec)
 "iK" = (
@@ -2992,27 +2996,6 @@
 /obj/structure/iv_drip,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
-	},
-/turf/simulated/floor/tiled/white,
-/area/casinojack/Med)
-"iO" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/ivbag/nanoblood,
-/obj/item/weapon/reagent_containers/ivbag/blood/AMinus,
-/obj/item/weapon/reagent_containers/ivbag/blood/APlus,
-/obj/item/weapon/reagent_containers/ivbag/blood/BMinus,
-/obj/item/weapon/reagent_containers/ivbag/blood/BPlus,
-/obj/item/weapon/reagent_containers/ivbag/blood/OMinus,
-/obj/item/weapon/reagent_containers/ivbag/blood/OPlus,
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
-	},
-/obj/effect/floor_decal/industrial/outline/grey{
-	color = "";
-	desc = "F8F8F8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/casinojack/Med)
@@ -3151,7 +3134,9 @@
 /turf/simulated/floor/tiled/white,
 /area/casinojack/Med)
 "jg" = (
-/obj/machinery/door/airlock/glass/medical,
+/obj/machinery/door/airlock/glass/medical{
+	name = "Medical Equipment"
+	},
 /obj/effect/floor_decal/industrial/hatch/yellow{
 	color = "#6a97b0"
 	},
@@ -3800,7 +3785,7 @@
 "ky" = (
 /obj/machinery/door/airlock/multi_tile/glass/medical{
 	autoset_access = 0;
-	id_tag = "MedbayFoyer";
+	id_tag = "medcasino";
 	name = "Infirmary";
 	req_access = list(list("ACCESS_MEDICAL","ACCESS_MORGUE"))
 	},
@@ -3841,9 +3826,6 @@
 /area/beach/playa)
 "kE" = (
 /obj/structure/bed/chair/wood/walnut,
-/obj/effect/landmark{
-	name = "endgame_exit"
-	},
 /turf/simulated/floor/holofloor/beach/sand,
 /area/beach/playa)
 "kF" = (
@@ -4183,6 +4165,10 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
+/obj/machinery/button/alternate/door{
+	id_tag = "medcasino";
+	name = "Infirmary Door"
+	},
 /turf/simulated/floor/tiled/white,
 /area/casinojack/Med)
 "lm" = (
@@ -4456,6 +4442,13 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/wood/walnut,
 /area/beach/playa)
+"me" = (
+/obj/machinery/door/airlock{
+	id_tag = "cabinfour";
+	name = "Cabin Four"
+	},
+/turf/space,
+/area/nieve/cuarto4)
 "mg" = (
 /obj/structure/casino/roulette_chart,
 /obj/structure/table/gamblingtable,
@@ -4693,7 +4686,9 @@
 	dir = 4;
 	icon_state = "spline_fancy"
 	},
-/obj/structure/bed/double/padded,
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto1)
 "mO" = (
@@ -4722,7 +4717,9 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
-/obj/structure/bed/double/padded,
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto2)
 "mS" = (
@@ -4751,7 +4748,9 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
-/obj/structure/bed/double/padded,
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto3)
 "mW" = (
@@ -4780,7 +4779,9 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
-/obj/structure/bed/double/padded,
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/orange,
 /area/casinojack/cuarto4)
 "na" = (
@@ -5488,7 +5489,7 @@
 	id_tag = "cabinone";
 	name = "Cabin One Bolts";
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/wood,
 /area/casinojack/cuarto1)
@@ -5521,7 +5522,7 @@
 	id_tag = "cabintwo";
 	name = "Cabin Two Bolts";
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/wood,
 /area/casinojack/cuarto2)
@@ -5548,7 +5549,7 @@
 	id_tag = "cabinthree";
 	name = "Cabin Three Bolts";
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/wood,
 /area/casinojack/cuarto3)
@@ -5575,7 +5576,7 @@
 	id_tag = "cabinfour";
 	name = "Cabin Four Bolts";
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/wood,
 /area/casinojack/cuarto4)
@@ -6738,7 +6739,7 @@
 /obj/machinery/door/airlock/multi_tile/glass/medical{
 	autoset_access = 0;
 	dir = 8;
-	id_tag = "MedbayFoyer";
+	id_tag = "hotelcasino";
 	name = "Infirmary";
 	req_access = list(list("ACCESS_MEDICAL","ACCESS_MORGUE"))
 	},
@@ -6890,6 +6891,10 @@
 	name = "Medical Reception"
 	},
 /obj/structure/table/reinforced,
+/obj/machinery/button/alternate/door{
+	id_tag = "hotelcasino";
+	name = "Infirmary Door"
+	},
 /turf/simulated/floor/carpet/blue2,
 /area/nieve/med)
 "sy" = (
@@ -7037,9 +7042,6 @@
 "sU" = (
 /obj/structure/window/reinforced/crescent,
 /obj/structure/window/reinforced/crescent{
-	dir = 8
-	},
-/obj/structure/window/reinforced/crescent{
 	dir = 1
 	},
 /obj/structure/grille,
@@ -7079,7 +7081,6 @@
 "ta" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart,
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart,
 /obj/structure/curtain/open/bed{
 	pixel_y = 32
 	},
@@ -7111,6 +7112,7 @@
 /area/nieve/cuarto1)
 "tf" = (
 /obj/structure/table/woodentable/walnut,
+/obj/item/device/flashlight/lamp/green,
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto1)
 "tg" = (
@@ -7170,15 +7172,12 @@
 /area/nieve/cuarto1)
 "tq" = (
 /obj/item/weapon/bedsheet/browndouble,
-/obj/structure/bed/double/padded,
-/obj/structure/curtain/open/bed{
-	pixel_x = 32;
-	pixel_y = 0
+/obj/structure/bed/double/padded{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto1)
 "tr" = (
-/obj/structure/window/reinforced/crescent,
 /obj/structure/window/reinforced/crescent{
 	dir = 1
 	},
@@ -7186,9 +7185,8 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/crescent{
-	dir = 8
-	},
+/obj/structure/window/reinforced/crescent,
+/obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood/walnut,
 /area/nieve/cuarto1)
 "ts" = (
@@ -7210,7 +7208,7 @@
 	id_tag = "cabinone";
 	name = "Cabin One Bolts";
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto1)
@@ -7249,12 +7247,6 @@
 "tE" = (
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto2)
-"tF" = (
-/obj/structure/table/woodentable/walnut,
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart,
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart,
-/turf/simulated/floor/carpet/orange,
-/area/nieve/cuarto2)
 "tG" = (
 /obj/structure/table/woodentable/walnut,
 /obj/machinery/light{
@@ -7279,6 +7271,7 @@
 /area/nieve/cuarto2)
 "tK" = (
 /obj/structure/table/woodentable/walnut,
+/obj/item/device/flashlight/lamp/green,
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto2)
 "tL" = (
@@ -7320,9 +7313,7 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/crescent{
-	dir = 8
-	},
+/obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood/walnut,
 /area/nieve/cuarto2)
 "tS" = (
@@ -7346,14 +7337,14 @@
 	id_tag = "cabintwo";
 	name = "Cabin Two Bolts";
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto2)
 "tW" = (
 /obj/machinery/light_switch{
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto2)
@@ -7441,10 +7432,6 @@
 /obj/item/weapon/book/manual/hydroponics_pod_people,
 /turf/simulated/floor/carpet/orange,
 /area/nieve/biblioteca)
-"un" = (
-/obj/structure/bed/chair/armchair/brown,
-/turf/simulated/floor/carpet/orange,
-/area/nieve/cuarto3)
 "uo" = (
 /obj/structure/bookcase,
 /obj/item/weapon/book/manual/atmospipes,
@@ -7469,9 +7456,7 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/structure/window/reinforced/crescent{
-	dir = 8
-	},
+/obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood/walnut,
 /area/nieve/cuarto3)
 "uq" = (
@@ -7502,31 +7487,22 @@
 	id_tag = "cabinthree";
 	name = "Cabin Three Bolts";
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
+/obj/machinery/space_heater,
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto3)
 "uw" = (
 /obj/machinery/light_switch{
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto3)
 "ux" = (
-/obj/structure/curtain/open/bed{
-	pixel_y = -32
+/obj/structure/bed/chair/armchair/brown{
+	dir = 8
 	},
-/obj/structure/table/woodentable/walnut,
-/turf/simulated/floor/carpet/orange,
-/area/nieve/cuarto3)
-"uy" = (
-/obj/structure/curtain/open/bed{
-	pixel_y = -32
-	},
-/obj/structure/table/woodentable/walnut,
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart,
-/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart,
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto3)
 "uz" = (
@@ -7571,33 +7547,11 @@
 /obj/machinery/chemical_dispenser/tac_coffee/full/good,
 /turf/simulated/floor/carpet/orange,
 /area/nieve/med)
-"uG" = (
-/obj/structure/window/reinforced/crescent,
-/obj/structure/window/reinforced/crescent{
-	dir = 8
-	},
-/obj/structure/window/reinforced/crescent{
-	dir = 1
-	},
-/obj/structure/grille,
-/turf/simulated/floor/wood/walnut,
-/area/nieve/cuarto3)
 "uH" = (
 /obj/structure/flora/grass/green,
 /obj/structure/flora/grass/green,
 /turf/simulated/floor/holofloor/snow,
 /area/nieve/bosque)
-"uI" = (
-/obj/structure/window/reinforced/crescent,
-/obj/structure/window/reinforced/crescent{
-	dir = 1
-	},
-/obj/structure/window/reinforced/crescent{
-	dir = 4
-	},
-/obj/structure/grille,
-/turf/simulated/floor/wood/walnut,
-/area/nieve/cuarto3)
 "uJ" = (
 /obj/structure/table/woodentable/walnut,
 /obj/structure/curtain/open/privacy{
@@ -7861,6 +7815,7 @@
 "vK" = (
 /obj/structure/table/rack,
 /obj/effect/decal/cleanable/dirt,
+/obj/random/mre,
 /turf/simulated/floor/holofloor/wood{
 	icon_state = "wood_broken4"
 	},
@@ -7877,6 +7832,7 @@
 /obj/structure/table/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/random/snack,
 /turf/simulated/floor/holofloor/wood{
 	icon_state = "wood_broken1"
 	},
@@ -8026,7 +7982,7 @@
 /obj/machinery/light,
 /obj/machinery/light_switch{
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/wood/walnut,
 /area/nieve/bar)
@@ -8052,10 +8008,8 @@
 /area/nieve/med)
 "wn" = (
 /obj/item/weapon/bedsheet/browndouble,
-/obj/structure/bed/double/padded,
-/obj/structure/curtain/open/bed{
-	pixel_x = 32;
-	pixel_y = 0
+/obj/structure/bed/double/padded{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto2)
@@ -8073,10 +8027,8 @@
 /area/nieve/cuarto3)
 "wq" = (
 /obj/item/weapon/bedsheet/browndouble,
-/obj/structure/bed/double/padded,
-/obj/structure/curtain/open/bed{
-	pixel_x = 32;
-	pixel_y = 0
+/obj/structure/bed/double/padded{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto3)
@@ -8174,7 +8126,13 @@
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto2)
 "wJ" = (
-/obj/machinery/space_heater,
+/obj/structure/table/woodentable/walnut,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart{
+	pixel_x = 5
+	},
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart{
+	pixel_x = -5
+	},
 /turf/simulated/floor/carpet/orange,
 /area/nieve/cuarto3)
 "wK" = (
@@ -8205,6 +8163,9 @@
 	dir = 1
 	},
 /obj/structure/grille,
+/obj/structure/window/reinforced/crescent{
+	dir = 4
+	},
 /turf/simulated/floor/wood/walnut,
 /area/nieve/principal)
 "wP" = (
@@ -8652,10 +8613,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/carpet/orange,
 /area/nieve/principal)
-"yg" = (
-/obj/structure/flora/pottedplant/floorleafnieve,
-/turf/simulated/floor/wood/walnut,
-/area/nieve/biblioteca)
 "yh" = (
 /obj/structure/window/reinforced/crescent,
 /obj/structure/window/reinforced/crescent{
@@ -8710,6 +8667,13 @@
 	},
 /turf/simulated/floor/holofloor/snow,
 /area/nieve/bosque)
+"yq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/loot,
+/turf/simulated/floor/holofloor/wood{
+	icon_state = "wood_broken4"
+	},
+/area/nieve/bosque)
 "yr" = (
 /obj/machinery/light{
 	dir = 1
@@ -8756,6 +8720,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/walnut,
 /area/nieve/bosque)
+"yN" = (
+/obj/machinery/light_switch{
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "yO" = (
 /obj/effect/floor_decal/corner/red{
 	icon_state = "corner_white";
@@ -8788,12 +8759,17 @@
 /obj/item/device/flashlight/lantern,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
+"zb" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/device/flashlight/lamp/green,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto3)
 "zc" = (
 /turf/simulated/wall/walnut,
 /area/nieve/sauna)
 "ze" = (
 /obj/machinery/light_switch{
-	pixel_x = 32;
+	pixel_x = 24;
 	pixel_y = 0
 	},
 /turf/simulated/floor/holofloor/concrete,
@@ -8876,6 +8852,7 @@
 /obj/item/weapon/pickaxe,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/storage/sheetsnatcher,
+/obj/random/coin,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
 "zH" = (
@@ -8910,6 +8887,16 @@
 	icon_state = "wood_broken4"
 	},
 /area/nieve/bosque)
+"zW" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart{
+	pixel_x = 5
+	},
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeecup/heart{
+	pixel_x = -5
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto2)
 "zX" = (
 /obj/structure/flora/tree/dead,
 /obj/effect/decal/cleanable/dirt,
@@ -8982,6 +8969,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/nieve/bosque)
+"Aw" = (
+/obj/structure/table/woodentable/walnut,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/loot,
+/turf/simulated/floor/holofloor/desert,
+/area/nieve/bosque)
 "Ax" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9022,6 +9016,13 @@
 /obj/structure/flora/grass/green,
 /turf/simulated/floor/holofloor/snow,
 /area/nieve/bosque)
+"AI" = (
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet,
+/area/casinojack/principal)
 "AP" = (
 /obj/structure/bed,
 /turf/simulated/floor/holofloor/wood{
@@ -9080,6 +9081,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/nieve/bosque)
+"Bp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/toolbox,
+/turf/simulated/floor/holofloor/wood{
+	icon_state = "wood_broken3"
+	},
+/area/nieve/bosque)
 "Br" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
@@ -9137,11 +9146,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
-"BI" = (
-/obj/structure/flora/grass/both,
-/obj/item/weapon/archaeological_find/trap,
-/turf/simulated/floor/holofloor/snow,
-/area/nieve/bosque)
 "BK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9151,10 +9155,24 @@
 	icon_state = "wood_broken1"
 	},
 /area/nieve/bosque)
-"BR" = (
-/obj/item/weapon/archaeological_find/trap,
-/turf/simulated/floor/holofloor/snow,
-/area/nieve/bosque)
+"BO" = (
+/obj/structure/flora/pottedplant/floorleafnieve,
+/obj/structure/curtain/open/bed{
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood/walnut,
+/area/nieve/biblioteca)
+"BT" = (
+/obj/structure/window/reinforced/crescent,
+/obj/structure/window/reinforced/crescent{
+	dir = 1
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced/crescent{
+	dir = 8
+	},
+/turf/simulated/floor/wood/walnut,
+/area/nieve/cuarto4)
 "BV" = (
 /obj/structure/flora/grass/both,
 /obj/structure/flora/grass/green,
@@ -9170,6 +9188,9 @@
 	icon_state = "wood_broken2"
 	},
 /area/nieve/bosque)
+"BX" = (
+/turf/simulated/wall/r_wall/hull,
+/area/casinojack/sec)
 "Cc" = (
 /obj/machinery/light,
 /turf/simulated/floor/holofloor/concrete,
@@ -9179,6 +9200,10 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/holofloor/concrete,
 /area/nieve/garaje)
+"Ck" = (
+/obj/random/shoes,
+/turf/simulated/floor/holofloor/snow,
+/area/nieve/bosque)
 "Cm" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -9206,6 +9231,14 @@
 /obj/item/weapon/reagent_containers/food/snacks/fish,
 /turf/simulated/floor/tiled/white,
 /area/nieve/bosque)
+"Cv" = (
+/obj/machinery/vending/wallmed1{
+	dir = 8;
+	name = "Emergency NanoMed";
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood/walnut,
+/area/casinojack/principal)
 "Cx" = (
 /turf/simulated/floor/carpet/blue3,
 /area/casinojack/principal)
@@ -9215,6 +9248,12 @@
 /obj/item/weapon/mop,
 /turf/simulated/floor/holofloor/concrete,
 /area/nieve/garaje)
+"CE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/remains,
+/turf/simulated/floor/holofloor/desert,
+/area/nieve/bosque)
 "CH" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/bear,
@@ -9235,6 +9274,10 @@
 /area/nieve/bosque)
 "CQ" = (
 /obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/holofloor/snow,
+/area/nieve/bosque)
+"CR" = (
+/obj/random/tool,
 /turf/simulated/floor/holofloor/snow,
 /area/nieve/bosque)
 "CV" = (
@@ -9298,6 +9341,10 @@
 /obj/structure/flora/pottedplant/decorative,
 /turf/simulated/floor/wood,
 /area/nieve/bosque)
+"Di" = (
+/obj/machinery/light,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "Dj" = (
 /obj/structure/window/reinforced/crescent,
 /obj/structure/window/reinforced/crescent{
@@ -9355,6 +9402,13 @@
 	icon_state = "wood_broken4"
 	},
 /area/nieve/bosque)
+"DC" = (
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/orange,
+/area/beach/principal)
 "DD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood{
@@ -9448,6 +9502,10 @@
 	},
 /turf/simulated/floor/carpet,
 /area/nieve/bosque)
+"Er" = (
+/obj/structure/undies_wardrobe,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "Et" = (
 /obj/structure/closet/crate/medical,
 /obj/item/weapon/storage/firstaid/fire{
@@ -9547,12 +9605,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/walnut,
 /area/nieve/bosque)
+"EZ" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8;
+	icon_state = "map"
+	},
+/turf/simulated/floor/plating,
+/area/casinojack/Med)
 "Fb" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9;
 	icon_state = "spline_fancy"
 	},
 /obj/structure/table/woodentable/walnut,
+/obj/random/firstaid,
 /turf/simulated/floor/carpet,
 /area/nieve/bosque)
 "Ff" = (
@@ -9656,11 +9723,14 @@
 /area/nieve/bosque)
 "FV" = (
 /obj/machinery/light_switch{
-	pixel_x = -32;
+	pixel_x = -24;
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/nieve/cambiador)
+"FX" = (
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "FY" = (
 /obj/machinery/sleeper{
 	dir = 1
@@ -9818,7 +9888,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/light_switch{
-	pixel_x = 32;
+	pixel_x = 24;
 	pixel_y = 0
 	},
 /turf/simulated/floor/wood/walnut,
@@ -9985,7 +10055,7 @@
 "IB" = (
 /obj/machinery/light_switch{
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /obj/structure/table/woodentable/walnut,
 /obj/item/toy/desk/fan,
@@ -10010,6 +10080,10 @@
 	icon_state = "wood_broken3"
 	},
 /area/nieve/bosque)
+"IJ" = (
+/obj/random/junk,
+/turf/simulated/floor/holofloor/snow,
+/area/nieve/bosque)
 "IL" = (
 /obj/structure/closet/secure_closet/personal/empty,
 /obj/machinery/light{
@@ -10018,6 +10092,11 @@
 	},
 /turf/simulated/floor/wood/walnut,
 /area/beach/cambiador)
+"IM" = (
+/obj/structure/table/woodentable/walnut,
+/obj/item/device/flashlight/lamp/green,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "IN" = (
 /obj/effect/decal/remains,
 /obj/effect/decal/cleanable/dirt,
@@ -10052,6 +10131,8 @@
 /obj/item/stack/material/steel/fifty,
 /obj/item/stack/material/glass/fifty,
 /obj/item/stack/material/aluminium/fifty,
+/obj/item/stack/material/wood/walnut/twentyfive,
+/obj/item/stack/material/wood/walnut/twentyfive,
 /turf/simulated/floor/holofloor/concrete,
 /area/nieve/garaje)
 "IX" = (
@@ -10080,6 +10161,13 @@
 	icon_state = "wood_broken2"
 	},
 /area/nieve/bosque)
+"Jd" = (
+/obj/item/weapon/bedsheet/browndouble,
+/obj/structure/bed/double/padded{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "Je" = (
 /obj/structure/curtain/open/bed{
 	pixel_y = 32
@@ -10118,8 +10206,17 @@
 "Jw" = (
 /obj/structure/table/woodentable/walnut,
 /obj/effect/decal/cleanable/dirt,
+/obj/random/loot,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
+"Jz" = (
+/obj/structure/window/reinforced/crescent,
+/obj/structure/window/reinforced/crescent{
+	dir = 1
+	},
+/obj/structure/grille,
+/turf/simulated/floor/wood/walnut,
+/area/nieve/biblioteca)
 "JB" = (
 /obj/structure/bed,
 /obj/effect/decal/cleanable/dirt,
@@ -10174,6 +10271,12 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/nieve/bosque)
+"JY" = (
+/obj/machinery/light_switch{
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/nieve/cocina)
 "JZ" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/weapon/gun/projectile/heavysniper/boltaction,
@@ -10239,6 +10342,7 @@
 /obj/item/device/radio,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/random/coin,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
 "Km" = (
@@ -10246,6 +10350,13 @@
 /obj/structure/ore_box,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
+"Ks" = (
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/red,
+/area/nieve/sec)
 "Ky" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet,
@@ -10271,6 +10382,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
+"KR" = (
+/obj/structure/closet/cabinet,
+/obj/item/device/camera,
+/obj/item/weapon/storage/candle_box,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "KS" = (
 /obj/machinery/light{
 	dir = 1;
@@ -10291,6 +10408,13 @@
 	icon_state = "wood_broken1"
 	},
 /area/nieve/bosque)
+"KX" = (
+/obj/machinery/light_switch{
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto1)
 "Lb" = (
 /obj/item/clothing/suit/cultrobes,
 /obj/structure/bed,
@@ -10300,6 +10424,10 @@
 /turf/simulated/floor/holofloor/wood{
 	icon_state = "wood_broken1"
 	},
+/area/nieve/bosque)
+"Lc" = (
+/obj/random/smokes,
+/turf/simulated/floor/holofloor/snow,
 /area/nieve/bosque)
 "Le" = (
 /turf/simulated/floor/tiled/monotile,
@@ -10314,7 +10442,7 @@
 /obj/machinery/light,
 /obj/machinery/light_switch{
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/nieve/sauna)
@@ -10322,8 +10450,16 @@
 /obj/machinery/door/unpowered/simple/walnut,
 /turf/simulated/floor/wood/walnut,
 /area/nieve/cambiador)
+"Lo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/remains,
+/turf/simulated/floor/holofloor/desert,
+/area/nieve/bosque)
 "Lq" = (
 /obj/structure/table/woodentable/walnut,
+/obj/random/toy,
 /turf/simulated/floor/wood,
 /area/nieve/bosque)
 "Ls" = (
@@ -10350,6 +10486,33 @@
 "LE" = (
 /turf/simulated/floor/holofloor/snow/ice,
 /area/nieve/bosque)
+"LG" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/weapon/reagent_containers/ivbag/nanoblood,
+/obj/item/weapon/reagent_containers/ivbag/blood/AMinus,
+/obj/item/weapon/reagent_containers/ivbag/blood/APlus,
+/obj/item/weapon/reagent_containers/ivbag/blood/BMinus,
+/obj/item/weapon/reagent_containers/ivbag/blood/BPlus,
+/obj/item/weapon/reagent_containers/ivbag/blood/OMinus,
+/obj/item/weapon/reagent_containers/ivbag/blood/OPlus,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/outline/grey{
+	color = "";
+	desc = "F8F8F8"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/casinojack/Med)
+"LJ" = (
+/obj/structure/bed/chair/armchair/brown{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto2)
 "LM" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced{
@@ -10377,6 +10540,18 @@
 "LT" = (
 /turf/simulated/wall/walnut,
 /area/nieve/garaje)
+"Ma" = (
+/obj/structure/window/reinforced/crescent,
+/obj/structure/window/reinforced/crescent{
+	dir = 1
+	},
+/obj/structure/window/reinforced/crescent{
+	dir = 4
+	},
+/obj/structure/grille,
+/obj/structure/curtain/open/bed,
+/turf/simulated/floor/wood/walnut,
+/area/nieve/cuarto4)
 "Mc" = (
 /obj/machinery/door/unpowered/simple/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -10468,11 +10643,6 @@
 "My" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate,
-/obj/item/weapon/archaeological_find/trap,
-/obj/item/weapon/archaeological_find/trap,
-/obj/item/weapon/archaeological_find/trap,
-/obj/item/weapon/archaeological_find/trap,
-/obj/item/weapon/archaeological_find/trap,
 /turf/simulated/floor/holofloor/concrete,
 /area/nieve/garaje)
 "Mz" = (
@@ -10531,6 +10701,9 @@
 /obj/random/firstaid,
 /turf/simulated/floor/tiled/monotile,
 /area/nieve/bosque)
+"Nm" = (
+/turf/simulated/wall/walnut,
+/area/nieve/cuarto4)
 "Nn" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
@@ -10542,6 +10715,15 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/nieve/garaje)
+"Ns" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/casinojack/Med)
 "Nu" = (
 /obj/structure/table/rack,
 /obj/item/weapon/reagent_containers/food/snacks/liquidfood,
@@ -10609,6 +10791,17 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/nieve/garaje)
+"Og" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance{
+	name = "Cryotube Maintenence"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow{
+	color = "#6a97b0"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/white,
+/area/casinojack/Med)
 "Oi" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/device/radio,
@@ -10630,6 +10823,10 @@
 	icon_state = "wood_broken6"
 	},
 /area/nieve/bosque)
+"Om" = (
+/obj/random/tech_supply,
+/turf/simulated/floor/holofloor/snow,
+/area/nieve/bosque)
 "Or" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/simulated/floor/carpet/orange,
@@ -10641,6 +10838,13 @@
 /obj/item/stack/material/phoron/fifty,
 /turf/simulated/floor/holofloor/concrete,
 /area/nieve/garaje)
+"Ou" = (
+/obj/machinery/light_switch{
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/nieve/med)
 "Oy" = (
 /obj/item/stack/material/wood{
 	amount = 60
@@ -10718,6 +10922,19 @@
 /mob/living/simple_animal/hostile/bear,
 /turf/simulated/floor/holofloor/snow,
 /area/nieve/bosque)
+"OW" = (
+/obj/machinery/atmospherics/unary/cryo_cell,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow{
+	color = "F8F8F8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/casinojack/Med)
 "OZ" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/holofloor/desert,
@@ -10745,6 +10962,16 @@
 	},
 /turf/simulated/floor/wood/walnut,
 /area/nieve/sauna)
+"Ph" = (
+/obj/random/hat,
+/turf/simulated/floor/holofloor/snow,
+/area/nieve/bosque)
+"Pi" = (
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/casinojack/Med)
 "Pk" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/holofloor/tiled/dark,
@@ -10784,6 +11011,10 @@
 /obj/item/weapon/mop,
 /turf/simulated/floor/wood,
 /area/nieve/bosque)
+"Py" = (
+/obj/structure/bed/chair/armchair/brown,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "PB" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/watertank,
@@ -10811,13 +11042,13 @@
 "PR" = (
 /obj/machinery/light_switch{
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/wood/walnut,
 /area/nieve/principal)
 "PS" = (
 /obj/machinery/light_switch{
-	pixel_x = 32;
+	pixel_x = 24;
 	pixel_y = 0
 	},
 /obj/structure/reagent_dispensers/water_cooler{
@@ -10837,6 +11068,17 @@
 /obj/structure/flora/pottedplant/decorative,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/casinojack/sec)
+"Qc" = (
+/turf/simulated/wall/r_wall/hull,
+/area/casinojack/principal)
+"Qe" = (
+/obj/structure/closet/cabinet,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#aa5f61"
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "Qg" = (
 /obj/structure/table/woodentable/walnut,
 /obj/item/weapon/paper{
@@ -10846,6 +11088,10 @@
 	text = "<h4>Fue mala idea venir por el... era obvio que no podríamos contra... ¿eso? después de ver lo que les hizo a los ciudadanos... ya da igual, el capitán esta obsesionado y hará lo que sea para encontrarle y no le culpo... el es el que mas le odia de entre todos los que vinimos a la caza... aunque si sigue así el también caerá... como los otros... como yo. Ya no siento mis piernas... es obvio que voy a morirá aquí... ojala... ojala el capitán le encuentre y vuelva victorioso... así al menos me recordaran como un héroe... me gustaría ser un héroe... ojala sea uno para ella."
 	},
 /turf/simulated/floor/wood,
+/area/nieve/bosque)
+"Ql" = (
+/obj/random/gloves,
+/turf/simulated/floor/holofloor/snow,
 /area/nieve/bosque)
 "Qq" = (
 /obj/structure/flora/grass/brown,
@@ -10877,6 +11123,10 @@
 /obj/item/weapon/material/kitchen/utensil/fork,
 /turf/simulated/floor/wood,
 /area/nieve/bosque)
+"QD" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "QE" = (
 /obj/structure/window/reinforced/crescent,
 /obj/structure/window/reinforced/crescent{
@@ -10891,10 +11141,16 @@
 "QG" = (
 /obj/machinery/light_switch{
 	pixel_x = 0;
-	pixel_y = -32
+	pixel_y = -24
 	},
 /turf/simulated/floor/carpet/red,
 /area/nieve/sec)
+"QM" = (
+/obj/structure/bed/chair/armchair/brown{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto2)
 "QO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -10908,6 +11164,13 @@
 	},
 /turf/simulated/floor/holofloor/concrete,
 /area/nieve/garaje)
+"QR" = (
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/principal)
 "QS" = (
 /obj/structure/table/rack,
 /obj/item/weapon/towel/random,
@@ -11105,6 +11368,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
+"SA" = (
+/turf/simulated/wall/r_wall/hull,
+/area/casinojack/bar)
 "SB" = (
 /obj/machinery/light_switch{
 	pixel_x = 0;
@@ -11189,6 +11455,15 @@
 /obj/machinery/light,
 /turf/simulated/wall/walnut,
 /area/nieve/sauna)
+"Tf" = (
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "cabinfour";
+	name = "Cabin Four Bolts";
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "Th" = (
 /obj/structure/flora/grass/green,
 /obj/structure/flora/grass/green,
@@ -11227,14 +11502,6 @@
 "Tz" = (
 /turf/simulated/floor/tiled/white,
 /area/nieve/bosque)
-"TA" = (
-/obj/machinery/light_switch{
-	pixel_x = 0;
-	pixel_y = -32
-	},
-/obj/machinery/light,
-/turf/simulated/floor/tiled/freezer,
-/area/nieve/cocina)
 "TB" = (
 /obj/machinery/atm{
 	pixel_x = -32
@@ -11247,6 +11514,17 @@
 /obj/item/weapon/crowbar/red,
 /turf/simulated/floor/holofloor/snow,
 /area/nieve/bosque)
+"TL" = (
+/obj/structure/window/reinforced/crescent,
+/obj/structure/window/reinforced/crescent{
+	dir = 1
+	},
+/obj/structure/window/reinforced/crescent{
+	dir = 4
+	},
+/obj/structure/grille,
+/turf/simulated/floor/wood/walnut,
+/area/nieve/cuarto4)
 "TN" = (
 /obj/structure/flora/grass/both,
 /turf/unsimulated/mineral,
@@ -11286,6 +11564,24 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/nieve/bosque)
+"Ua" = (
+/obj/machinery/light/spot,
+/obj/machinery/button/alternate/door{
+	desc = "A remote control switch for the medbay foyer.";
+	id_tag = "MedbayER";
+	name = "Treatment Center Door Control";
+	pixel_y = -25
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
 "Ub" = (
 /obj/item/weapon/paper_bin,
 /obj/item/weapon/pen,
@@ -11312,6 +11608,16 @@
 "Ui" = (
 /turf/simulated/floor/tiled/freezer,
 /area/nieve/sauna)
+"Uk" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/turf/simulated/floor/tiled/techfloor,
+/area/casinojack/Med)
+"Um" = (
+/obj/structure/flora/grass/both,
+/obj/random/junk,
+/turf/simulated/floor/holofloor/snow,
+/area/nieve/bosque)
 "Up" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
@@ -11338,6 +11644,13 @@
 /obj/machinery/media/jukebox/old,
 /turf/simulated/floor/wood,
 /area/nieve/bosque)
+"Uz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/casinojack/Med)
 "UB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/walnut,
@@ -11346,6 +11659,12 @@
 /obj/structure/ore_box,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
+"UF" = (
+/obj/structure/bed/chair/armchair/brown{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto3)
 "UI" = (
 /obj/structure/flora/grass/brown,
 /obj/item/device/flashlight/lantern,
@@ -11418,9 +11737,14 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/wood/walnut,
 /area/nieve/sauna)
+"Vp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/remains,
+/turf/simulated/floor/holofloor/desert,
+/area/nieve/bosque)
 "Vr" = (
 /obj/machinery/light_switch{
-	pixel_x = 32;
+	pixel_x = 24;
 	pixel_y = 0
 	},
 /turf/simulated/floor/wood/walnut,
@@ -11521,6 +11845,13 @@
 "Wk" = (
 /turf/simulated/floor/plating,
 /area/nieve/bosque)
+"Wl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/loot,
+/turf/simulated/floor/holofloor/wood{
+	icon_state = "wood_broken2"
+	},
+/area/nieve/bosque)
 "Wn" = (
 /obj/structure/window/reinforced/crescent,
 /obj/structure/window/reinforced/crescent{
@@ -11534,7 +11865,7 @@
 /area/nieve/gimnasio)
 "Wr" = (
 /obj/machinery/light_switch{
-	pixel_x = 32;
+	pixel_x = 24;
 	pixel_y = 0
 	},
 /turf/simulated/floor/carpet/orange,
@@ -11683,6 +12014,13 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet,
 /area/nieve/bosque)
+"Xx" = (
+/obj/machinery/light_switch{
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/turf/simulated/floor/carpet/orange,
+/area/nieve/principal)
 "Xz" = (
 /obj/machinery/door/window/brigdoor/eastleft{
 	dir = 4;
@@ -11784,6 +12122,11 @@
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/freezer,
 /area/nieve/cambiador)
+"Yb" = (
+/obj/structure/table/woodentable/walnut,
+/obj/structure/flora/pottedplant/deskleaf,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "Yc" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5;
@@ -11911,10 +12254,6 @@
 /area/nieve/bosque)
 "YG" = (
 /obj/structure/closet/cabinet,
-/obj/item/weapon/archaeological_find/trap,
-/obj/item/weapon/archaeological_find/trap,
-/obj/item/weapon/archaeological_find/trap,
-/obj/item/weapon/archaeological_find/trap,
 /obj/item/weapon/handcuffs,
 /obj/item/weapon/handcuffs,
 /obj/item/weapon/handcuffs,
@@ -11961,6 +12300,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/desert,
 /area/nieve/bosque)
+"YZ" = (
+/obj/structure/curtain/open/bed{
+	pixel_y = -32
+	},
+/obj/structure/table/woodentable/walnut,
+/turf/simulated/floor/carpet/orange,
+/area/nieve/cuarto4)
 "Zb" = (
 /obj/structure/table/marble,
 /obj/structure/sign/double/icarus/solgovflag/right{
@@ -13132,7 +13478,7 @@ iX
 ag
 ag
 ag
-cj
+DC
 cS
 ep
 kW
@@ -13850,7 +14196,7 @@ rW
 rW
 Zs
 rW
-rW
+Ql
 rW
 Ff
 Vh
@@ -14091,7 +14437,7 @@ rW
 Zs
 rW
 rW
-rW
+Om
 rW
 rW
 rW
@@ -14431,7 +14777,7 @@ rW
 rW
 rW
 uZ
-rW
+IJ
 rW
 rW
 rW
@@ -14689,7 +15035,7 @@ rY
 rZ
 rY
 rY
-rW
+Lc
 sm
 rW
 rW
@@ -15060,7 +15406,7 @@ rW
 rW
 rW
 rW
-rW
+Ph
 rW
 rW
 rW
@@ -16833,7 +17179,7 @@ qk
 qF
 qF
 qF
-QG
+qF
 qj
 qF
 qF
@@ -17088,7 +17434,7 @@ rW
 rW
 rW
 rW
-rW
+CR
 rW
 rW
 rW
@@ -18451,7 +18797,7 @@ qj
 qQ
 qF
 qj
-qF
+Ks
 qF
 qF
 qj
@@ -18567,7 +18913,7 @@ az
 az
 az
 af
-cj
+DC
 cS
 ep
 dp
@@ -18714,7 +19060,7 @@ rW
 rW
 rW
 rW
-rW
+IJ
 rW
 rW
 rW
@@ -19680,7 +20026,7 @@ rU
 sy
 rU
 rU
-SB
+Ou
 rL
 tk
 tm
@@ -19741,7 +20087,7 @@ rW
 rW
 rW
 rW
-rW
+Ck
 rW
 rW
 rE
@@ -22980,7 +23326,7 @@ Rw
 vD
 DD
 vF
-SL
+Bp
 vM
 zr
 vP
@@ -24948,7 +25294,7 @@ tP
 tP
 tP
 tP
-rW
+tP
 rW
 Zs
 rW
@@ -25148,9 +25494,9 @@ xd
 xf
 xi
 xl
+xh
 xz
 tP
-yr
 rW
 rW
 rW
@@ -25324,8 +25670,8 @@ sY
 Ww
 tl
 tl
-tl
-TA
+JY
+Oc
 sY
 sE
 sE
@@ -25338,7 +25684,7 @@ qi
 sP
 sE
 qi
-sP
+QR
 sP
 yC
 qi
@@ -25350,10 +25696,10 @@ wU
 xh
 xh
 xh
+xh
 xA
-yh
-rW
-rW
+tP
+yr
 rW
 rW
 rW
@@ -25551,10 +25897,10 @@ wU
 wU
 xh
 xh
+xh
 xm
 xB
-yi
-rW
+yh
 rW
 rW
 rW
@@ -25753,10 +26099,10 @@ wU
 wU
 xh
 xh
+xh
 xm
 xC
-yh
-rW
+Jz
 rW
 rW
 rZ
@@ -25956,9 +26302,9 @@ wU
 xh
 xh
 xh
+xh
 xR
-yi
-rW
+Jz
 rW
 rW
 rW
@@ -26013,7 +26359,7 @@ rW
 rW
 rW
 rW
-rY
+Um
 rW
 rW
 rW
@@ -26157,10 +26503,10 @@ wU
 wU
 xh
 xh
+xh
 xm
 xC
-yh
-rW
+Jz
 rW
 rW
 rW
@@ -26359,10 +26705,10 @@ wU
 wU
 xh
 xh
+xh
 xm
 xB
-yi
-rW
+Jz
 rW
 rW
 rW
@@ -26561,10 +26907,10 @@ xc
 xe
 PS
 xh
+xh
 xo
-yg
-tP
-rW
+BO
+yi
 rW
 rW
 rW
@@ -26766,7 +27112,7 @@ xk
 tP
 tP
 tP
-rE
+tP
 rW
 rW
 Zs
@@ -26966,10 +27312,10 @@ xQ
 sP
 sP
 wx
+sP
 wL
 qi
-rW
-rW
+rE
 rW
 rW
 rW
@@ -27168,10 +27514,10 @@ sP
 sP
 sP
 sP
-Xc
+sP
+Xx
 qi
 yr
-rW
 rW
 rW
 rW
@@ -27371,8 +27717,8 @@ sP
 sP
 sP
 sP
+sP
 wE
-rW
 rW
 rW
 rY
@@ -27569,13 +27915,13 @@ sP
 YC
 wy
 sP
-sP
 Uf
 TR
+sP
+sP
 sw
 qi
 Rb
-rW
 rW
 rW
 rY
@@ -27629,7 +27975,7 @@ rW
 uZ
 uZ
 uZ
-rW
+Lc
 rW
 Xo
 rW
@@ -27773,10 +28119,10 @@ ud
 xg
 ud
 ud
-qi
-qi
-qi
-rW
+Nm
+me
+Nm
+Nm
 rW
 Zs
 rW
@@ -27975,10 +28321,10 @@ uh
 uk
 uv
 ud
-rW
-rW
-rW
-rW
+QD
+FX
+Tf
+Nm
 rW
 rW
 rW
@@ -28167,9 +28513,9 @@ Gi
 sT
 td
 sZ
-sZ
+KX
 tC
-tF
+tE
 tE
 tW
 ud
@@ -28177,10 +28523,10 @@ ui
 uk
 uw
 ud
-yr
-rW
-rW
-rW
+KR
+FX
+yN
+Nm
 rW
 rW
 rW
@@ -28377,12 +28723,12 @@ tE
 ud
 wp
 uk
-uk
+UF
 ud
-rE
-rW
-rW
-rW
+Qe
+FX
+FX
+Nm
 rW
 rW
 rW
@@ -28575,16 +28921,16 @@ sZ
 tC
 tH
 tE
-tE
+LJ
 ud
-uk
+ul
 uk
 wJ
 ud
-rW
-rW
-rW
-Zs
+Er
+FX
+FX
+Nm
 rW
 rY
 Zs
@@ -28777,16 +29123,16 @@ sZ
 tC
 tI
 tE
-tE
+zW
 ud
 uk
-un
+uk
 ux
-uG
-rW
-rW
-rW
-rW
+ud
+FX
+Py
+YZ
+BT
 rW
 rY
 rW
@@ -28979,16 +29325,16 @@ tQ
 tC
 tJ
 tE
-tE
+QM
 ud
 uk
-un
-uy
-uI
-rW
-rW
-rW
-rW
+uk
+uk
+ud
+FX
+Py
+YZ
+TL
 rW
 rW
 rW
@@ -29187,10 +29533,10 @@ uk
 uk
 wr
 ud
-rW
-rW
-rW
-rW
+FX
+FX
+Di
+Nm
 rW
 Zs
 Zs
@@ -29385,14 +29731,14 @@ tK
 wn
 tX
 ud
-ul
+zb
 wq
 uz
 ud
-rW
-rE
-rW
-rW
+IM
+Jd
+Yb
+Nm
 rW
 Zs
 rW
@@ -29591,10 +29937,10 @@ ud
 up
 ud
 ud
-rW
-rW
-rW
-rW
+Nm
+Ma
+Nm
+Nm
 rW
 rZ
 rZ
@@ -30226,7 +30572,7 @@ rW
 rW
 rW
 rW
-rW
+IJ
 rW
 rW
 Zs
@@ -30378,7 +30724,7 @@ rW
 rW
 rW
 rY
-rW
+Ql
 rW
 rW
 rW
@@ -30459,7 +30805,7 @@ rW
 rW
 rW
 uZ
-rW
+Ph
 rW
 rW
 rW
@@ -32214,7 +32560,7 @@ ZA
 EF
 Wi
 Wi
-Wi
+Vp
 Wi
 Wi
 CN
@@ -33230,7 +33576,7 @@ Fg
 Sz
 OU
 Wi
-Wi
+Vp
 Wi
 qf
 rW
@@ -33289,7 +33635,7 @@ rY
 rW
 rW
 Xo
-rY
+Um
 rY
 rY
 BV
@@ -33653,7 +33999,7 @@ rY
 rY
 rW
 rW
-rW
+Ck
 rW
 rW
 rW
@@ -34903,7 +35249,7 @@ rE
 rW
 rW
 rW
-rW
+Lc
 rW
 rY
 rW
@@ -35243,7 +35589,7 @@ tB
 sl
 qf
 RM
-Wi
+Vp
 OU
 Sz
 Wi
@@ -35862,7 +36208,7 @@ qf
 Ew
 Sz
 Wi
-OU
+CE
 Xi
 OU
 Wi
@@ -35960,16 +36306,16 @@ ab
 ab
 ab
 ab
-ge
-ge
+BX
+BX
 gf
-ge
-ge
-ge
-ge
-ge
-ge
-ge
+BX
+BX
+BX
+BX
+BX
+BX
+BX
 ab
 ab
 ab
@@ -36159,20 +36505,20 @@ ab
 ab
 ab
 ab
-ge
-ge
-ge
-ge
+BX
+BX
+BX
+BX
 ja
 hn
 jy
-ge
-ge
+BX
+BX
 ko
 kJ
-ge
-ge
-gR
+BX
+BX
+Qc
 pW
 gR
 gR
@@ -36355,25 +36701,25 @@ ab
 ab
 ab
 ab
-ge
-ge
+BX
+BX
 gf
 gf
 gf
-ge
-ge
+BX
+BX
 Hl
 VR
-ge
+BX
 jb
 ho
 jb
-ge
+BX
 gA
 kp
 kp
 lc
-ge
+BX
 or
 pX
 qa
@@ -36557,16 +36903,16 @@ ab
 ab
 ab
 ab
-ge
+BX
 Gf
 kp
 CZ
 Ub
 yO
-ge
+BX
 gy
 jz
-ge
+BX
 gy
 ho
 jz
@@ -36575,7 +36921,7 @@ gy
 ho
 ho
 ld
-ge
+BX
 pE
 pY
 qb
@@ -36765,19 +37111,19 @@ ho
 Pk
 kd
 jz
-ge
+BX
 Zp
 jz
-ge
+BX
 ja
 ho
 ja
-ge
+BX
 gy
 ho
 ho
 le
-ge
+BX
 pI
 pY
 qc
@@ -36961,25 +37307,25 @@ ab
 ab
 ab
 ab
-ge
+BX
 kd
 kq
 kq
 OO
 jz
-ge
+BX
 Bb
 Vv
-ge
+BX
 jb
 hr
 jb
-ge
+BX
 kc
 kq
 kq
 lf
-ge
+BX
 pT
 pY
 qd
@@ -37098,7 +37444,7 @@ rW
 rW
 rY
 rW
-rW
+Om
 rW
 rW
 rW
@@ -37163,25 +37509,25 @@ ab
 ab
 ab
 ab
-ge
+BX
 XP
 yV
 ZP
 gy
 jz
-ge
+BX
 ip
 Xz
-ge
-ge
+BX
+BX
 jo
-ge
-ge
+BX
+BX
 ge
 kr
 kK
-ge
-ge
+BX
+BX
 pV
 pZ
 qe
@@ -37365,25 +37711,25 @@ ab
 ab
 ab
 ab
-ge
+BX
 MP
 ZP
 Mk
 gy
 jz
-ge
+BX
 gA
 kp
 iI
 jc
 hn
 jA
-ge
-ge
-ge
-ge
-ge
-ge
+BX
+BX
+BX
+BX
+BX
+BX
 gR
 qg
 gR
@@ -37567,7 +37913,7 @@ ab
 ab
 ab
 ab
-ge
+BX
 Zu
 As
 Mk
@@ -37769,13 +38115,13 @@ ab
 ab
 ab
 ab
-ge
+BX
 US
 NE
 Gu
 Pa
 gz
-ge
+BX
 Qb
 kq
 OO
@@ -37908,7 +38254,7 @@ rW
 rW
 rW
 rW
-rW
+Ph
 rW
 rW
 rE
@@ -37969,17 +38315,17 @@ ab
 ab
 ab
 ab
-dv
-dv
-dv
-dv
-dv
-dv
-dv
-ge
-ge
-ge
-ge
+dX
+dX
+dX
+dX
+dX
+dX
+dX
+BX
+BX
+BX
+BX
 iJ
 ho
 ho
@@ -38080,14 +38426,14 @@ qf
 Oz
 OU
 zB
-Sz
+Lo
 OU
 Wi
 qf
 qf
 IT
 OU
-Sz
+Lo
 Wi
 qf
 qf
@@ -38171,13 +38517,13 @@ ab
 ab
 ab
 ab
-dv
+dX
 dN
 et
 et
 et
 fO
-dv
+dX
 gA
 hq
 hQ
@@ -38393,7 +38739,7 @@ ke
 ho
 ho
 jz
-ge
+BX
 lI
 gS
 gS
@@ -38575,7 +38921,7 @@ ab
 ab
 ab
 ab
-dv
+dX
 dP
 ev
 ev
@@ -38595,7 +38941,7 @@ kd
 kt
 kt
 kd
-ge
+BX
 gS
 gS
 gS
@@ -38777,27 +39123,27 @@ ab
 ab
 ab
 ab
-dv
-dv
-dv
+dX
+dX
+dX
 eZ
-dv
-dv
-dv
-dv
-dv
-ge
-ge
-ge
-ge
-ge
-ge
-ge
-ge
-ge
-ge
-ge
-ge
+dX
+dX
+dX
+dX
+dX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
+BX
 gS
 gS
 gS
@@ -38811,7 +39157,7 @@ od
 oe
 oT
 gR
-gS
+AI
 gS
 zN
 ie
@@ -38979,7 +39325,7 @@ ab
 ab
 ab
 ab
-dv
+dX
 dQ
 dR
 dR
@@ -38987,7 +39333,7 @@ dR
 dR
 dR
 dR
-dv
+dX
 hR
 is
 iM
@@ -39189,7 +39535,7 @@ fa
 fa
 gg
 dR
-dv
+dX
 hS
 ht
 iN
@@ -39391,10 +39737,10 @@ fb
 fb
 gh
 dR
-dv
+dX
 hT
 ht
-iO
+iP
 je
 jp
 ht
@@ -39528,7 +39874,7 @@ rY
 rW
 Zs
 rW
-rW
+IJ
 rW
 rW
 rY
@@ -39585,7 +39931,7 @@ ab
 ab
 ab
 ab
-dv
+dX
 dR
 ex
 fb
@@ -39593,7 +39939,7 @@ fu
 fb
 gh
 dR
-dv
+dX
 hU
 ht
 iP
@@ -39704,7 +40050,7 @@ Xi
 Sz
 Xi
 KP
-CI
+Aw
 Ew
 qf
 qf
@@ -39730,7 +40076,7 @@ rW
 rW
 rW
 rW
-BR
+rW
 rW
 rW
 rY
@@ -39787,7 +40133,7 @@ ab
 ab
 ab
 ab
-dv
+dX
 dR
 ex
 fb
@@ -39795,10 +40141,10 @@ fb
 fb
 gh
 dR
-dv
+dX
 hV
 it
-iQ
+LG
 je
 gF
 jD
@@ -39997,12 +40343,12 @@ fc
 fc
 gi
 dR
-dv
+dX
 hW
 hW
 hW
 hW
-gF
+hU
 jE
 jP
 hW
@@ -40199,12 +40545,12 @@ dR
 dR
 dR
 gC
-dv
+dX
 hW
-hW
-hW
-hW
-gF
+Uk
+EZ
+Og
+Ns
 ht
 jQ
 iR
@@ -40390,10 +40736,10 @@ ab
 ab
 ab
 ab
+Ua
 ab
 ab
-ab
-dv
+dX
 dT
 ez
 dR
@@ -40401,12 +40747,12 @@ dR
 dR
 gj
 gD
-dv
+dX
 hW
+Pi
+Uz
 hW
-hW
-hW
-hU
+OW
 ht
 ht
 iP
@@ -40595,15 +40941,15 @@ ab
 ab
 ab
 ab
-dv
-dv
-dv
-dv
+dX
+dX
+dX
+dX
 fv
-dv
-dv
-dv
-dv
+dX
+dX
+dX
+dX
 hW
 hW
 hW
@@ -40797,13 +41143,13 @@ ab
 ab
 ab
 ab
-dv
+dX
 dU
 dV
 dV
 dV
 dV
-dv
+dX
 gE
 hs
 hX
@@ -40811,7 +41157,7 @@ iu
 iR
 je
 gF
-ht
+jD
 ht
 iP
 kA
@@ -41005,7 +41351,7 @@ eA
 fd
 fw
 dV
-dv
+dX
 gF
 ht
 ht
@@ -41013,7 +41359,7 @@ ht
 iP
 je
 gF
-ht
+jE
 ht
 iP
 kA
@@ -41207,7 +41553,7 @@ eB
 fe
 fx
 dV
-dv
+dX
 gG
 ht
 ht
@@ -41409,7 +41755,7 @@ eC
 ff
 fy
 dV
-dv
+dX
 gH
 ht
 ht
@@ -41611,7 +41957,7 @@ eD
 fg
 fz
 dV
-dv
+dX
 gI
 hu
 hY
@@ -41813,7 +42159,7 @@ eE
 fh
 fA
 dV
-dv
+dX
 dv
 dv
 dv
@@ -42009,13 +42355,13 @@ ab
 ab
 ab
 ab
-dv
+dX
 dW
 eF
 dV
 fB
 fR
-dv
+dX
 dv
 hv
 dV
@@ -42211,13 +42557,13 @@ ab
 ab
 ab
 ab
-dv
+dX
 dX
 dX
 fi
 dX
 dX
-dv
+dX
 dv
 hw
 dV
@@ -42308,7 +42654,7 @@ rE
 ZE
 Zs
 Xo
-rW
+IJ
 Xo
 rE
 rE
@@ -42413,13 +42759,13 @@ ab
 ab
 ab
 ab
-dv
+dX
 dX
 eG
 eH
 eH
 dX
-dv
+dX
 dv
 hx
 dV
@@ -42517,7 +42863,7 @@ Xo
 rW
 rE
 Xo
-BI
+rY
 Xo
 uH
 Xo
@@ -42537,7 +42883,7 @@ rW
 rW
 Zs
 rY
-rW
+Om
 rW
 rW
 rW
@@ -42615,13 +42961,13 @@ ab
 ab
 ab
 ab
-dv
+dX
 dX
 eH
 eH
 eH
 dX
-dv
+dX
 dv
 hy
 dV
@@ -42817,13 +43163,13 @@ ab
 ab
 ab
 ab
-dv
+dX
 dX
 eH
 eH
 eH
 dX
-dv
+dX
 dv
 hz
 dV
@@ -43019,13 +43365,13 @@ ab
 ab
 ab
 ab
-dv
+dX
 dX
 eI
 fj
 fC
 dX
-dv
+dX
 dv
 hA
 dV
@@ -43221,13 +43567,13 @@ ab
 ab
 ab
 ab
-dv
 dX
 dX
 dX
 dX
 dX
-dv
+dX
+dX
 dv
 hB
 dV
@@ -43423,13 +43769,13 @@ ab
 ab
 ab
 ab
-bG
-bG
-bG
-bG
-bG
-bG
-bG
+SA
+SA
+SA
+SA
+SA
+SA
+SA
 bG
 bG
 bG
@@ -43530,7 +43876,7 @@ rE
 rZ
 Zs
 rW
-rW
+Ql
 rW
 rW
 rW
@@ -44125,7 +44471,7 @@ rE
 rW
 rW
 rW
-rW
+Om
 Xo
 rW
 rW
@@ -44169,7 +44515,7 @@ HL
 rW
 rW
 rW
-BR
+rW
 rY
 rW
 rW
@@ -46027,7 +46373,7 @@ TP
 HP
 SL
 GD
-vG
+Wl
 RM
 qf
 qf
@@ -46065,7 +46411,7 @@ gQ
 gQ
 gQ
 gQ
-gQ
+Cv
 gQ
 gQ
 gQ
@@ -46134,7 +46480,7 @@ qf
 Zs
 Zs
 rW
-BR
+rW
 Ih
 Yw
 Yw
@@ -46586,7 +46932,7 @@ rW
 rW
 rW
 rW
-rW
+IJ
 rW
 rW
 rW
@@ -47032,7 +47378,7 @@ SL
 HB
 Mn
 vF
-DD
+yq
 UB
 DD
 Wc
